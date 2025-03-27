@@ -47,10 +47,10 @@ export interface WorkItem {
 }
 
 export const workData: WorkItem[] = [
-  { title: "Crypto Tracker", description: "Website", bgImage: "/crypto.png" },
-  { title: "Cake Shop", description: "Website", bgImage: "/monginis.png" },
-  { title: "Book Review System", description: "Website", bgImage: "/bookreview.png" },
-  { title: "Weather App", description: "Website", bgImage: "/weather.png" },
+  // { title: "Crypto Tracker", description: "Website", bgImage: "/crypto.png" },
+  // { title: "Cake Shop", description: "Website", bgImage: "/monginis.png" },
+  // { title: "Book Review System", description: "Website", bgImage: "/bookreview.png" },
+  // { title: "Weather App", description: "Website", bgImage: "/weather.png" },
 ];
 
 // Service Data

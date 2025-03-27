@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Biswarup Rana's Portfolio",
     description:
       "A modern, responsive portfolio built with Next.js and Tailwind CSS.",
-    url: "https://portfolioo-five-mu.vercel.app/",
+    url: "https://biswarup-rana.vercel.app/",
     siteName: "Biswarup Rana's Portfolio",
     images: [
       {
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://portfolioo-five-mu.vercel.app/",
+    canonical: "https://biswarup-rana.vercel.app/",
   },
 };
 

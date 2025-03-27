@@ -6,7 +6,7 @@ const nextConfig = {
 
 // Make sure adding Sentry options is the last code to run before exporting
 module.exports = withSentryConfig(nextConfig, {
-  org: "https://portfolioo-five-mu.vercel.app/",
+  org: "https://biswarup-rana.vercel.app/",
   project: "Biswarup's Portofilo",
 
   // Only print logs for uploading source maps in CI

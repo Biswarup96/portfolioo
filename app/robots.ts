@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap:"https://portfolioo-five-mu.vercel.app/"
+    sitemap:"https://biswarup-rana.vercel.app/"
   }
 }

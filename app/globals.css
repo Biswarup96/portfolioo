@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-lightHover: #fcf4ff;
+  --color-darkHover: #2a004a;
+  --color-darkTheme: #11001f;
+  --shadow-black: 4px 4px 0 #000;
+  --shadow-white: 4px 4px 0 #fff;
+}
+
+* {
+  font-family: Outfit, sans-serif;
+}
+
+/* Dark mode: overlay the header gradient with a dark tint so structure is preserved */
+.dark .header-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 0, 31, 0.82);
+  pointer-events: none;
+}
+
+@keyframes fade-in-scale {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-scale {
+  animation: fade-in-scale 0.8s ease-out forwards;
+}

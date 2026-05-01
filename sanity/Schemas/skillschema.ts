@@ -1,31 +1,37 @@
-import { defineType, defineField } from "sanity";
+import {defineField, defineType} from 'sanity'
 
-export default defineType({
-  name: "work",
-  title: "Work",
-  type: "document",
+export const postType = defineType({
+  name: 'post',
+  title: 'Post',
+  type: 'document',
   fields: [
     defineField({
-      name: "title",
-      title: "Title",
-      type: "string",
-      validation: (Rule) => Rule.required().min(5).max(100),
+      name: 'title',
+      type: 'string',
+      validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "description",
-      title: "Description",
-      type: "text",
+      name: 'slug',
+      type: 'slug',
+      options: {source: 'title'},
+      validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "url",
-      title: "Project URL",
-      type: "url", 
+      name: 'publishedAt',
+      type: 'datetime',
+      initialValue: () => new Date().toISOString(),
+      validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "image",
-      title: "Image",
-      type: "image",
-      options: { hotspot: true },
+      name: 'image',
+      type: 'image',
+    }),
+    defineField({
+      name: 'body',
+      type: 'array',
+      of: [{type: 'block'}],
     }),
   ],
-});
+})
+
+export default postType

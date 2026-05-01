@@ -1,18 +1,5 @@
-import { withSentryConfig } from "@sentry/nextjs";
-
 const nextConfig = {
-  // Your existing Next.js configuration
+  // your existing config (if any)
 };
 
-// Make sure adding Sentry options is the last code to run before exporting
-module.exports = withSentryConfig(nextConfig, {
-  org: "https://biswarup-rana.vercel.app/",
-  project: "Biswarup's Portofilo",
-
-  // Only print logs for uploading source maps in CI
-  // Set to `true` to suppress logs
-  silent: !process.env.CI,
-
-  // Automatically tree-shake Sentry logger statements to reduce bundle size
-  disableLogger: true,
-});
+module.exports = nextConfig;

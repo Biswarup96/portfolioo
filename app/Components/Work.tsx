@@ -1,47 +1,48 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState, useCallback } from "react";
-import { client } from "@/sanity/lib/client";
-import imageUrlBuilder from "@sanity/image-url";
 import sendicon from "@/public/send-icon.png";
 import rightArrowBold from "@/public/right-arrow-bold.png";
 
 interface ProjectType {
-  _id: string;
+  id: string;
   title: string;
   description: string;
   url: string;
-  image?: { asset: { _ref: string } };
+  imageUrl: string;
 }
 
-const builder = imageUrlBuilder(client);
-function urlFor(source: { asset: { _ref: string } } | undefined): string {
-  return source ? builder.image(source).url() : "/fallback-image.jpg";
-}
+const projects: ProjectType[] = [
+  {
+    id: "project-1",
+    title: "Portfolio Website",
+    description: "A responsive portfolio built with Next.js and Tailwind CSS.",
+    url: "#",
+    imageUrl: "/fallback-image.jpg",
+  },
+  {
+    id: "project-2",
+    title: "E-commerce UI",
+    description: "A polished product showcase with smooth animations and layout.",
+    url: "#",
+    imageUrl: "/fallback-image.jpg",
+  },
+  {
+    id: "project-3",
+    title: "Landing Page",
+    description: "A clean marketing landing page designed for conversion.",
+    url: "#",
+    imageUrl: "/fallback-image.jpg",
+  },
+  {
+    id: "project-4",
+    title: "Dashboard App",
+    description: "A modern admin dashboard with charts and user controls.",
+    url: "#",
+    imageUrl: "/fallback-image.jpg",
+  },
+];
 
 const Work = () => {
-  const [projects, setProjects] = useState<ProjectType[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-
-  const fetchWork = useCallback(async () => {
-    try {
-      setLoading(true);
-      const query = `*[_type=="work"]{_id, title, description, url, image}`;
-      const data: ProjectType[] = await client.fetch(query);
-      setProjects(data);
-    } catch (error) {
-      console.error("Error fetching projects:", error);
-      setError("Failed to load projects.");
-    } finally {
-      setLoading(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    fetchWork();
-  }, [fetchWork]);
-
   return (
     <section id="work" className="w-full px-[12%] py-10 scroll-mt-20">
       <h4 className="text-center mb-2 text-lg font-mono">My Portfolio</h4>
@@ -53,15 +54,12 @@ const Work = () => {
         and attractive user experiences.
       </p>
 
-      {loading && <p className="text-center dark:text-white">Loading projects...</p>}
-      {error && <p className="text-center text-red-500">{error}</p>}
-
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 my-10 gap-5">
         {projects.map((project) => (
           <div
-            key={project._id}
+            key={project.id}
             className="aspect-square bg-no-repeat bg-cover rounded-lg relative cursor-pointer group"
-            style={{ backgroundImage: `url(${urlFor(project.image)})` }}
+            style={{ backgroundImage: `url(${project.imageUrl})` }}
           >
             <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
               <div>

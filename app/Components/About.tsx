@@ -6,20 +6,20 @@ const infoList = [
   {
     icon: "/code-icon.png",
     iconDark: "/code-icon-dark.png",
-    title: "Languages",
-    description: "HTML, CSS, Typescript, JavaScript, React.js, Next.js",
+    title: "Tech Stack",
+description: "HTML, CSS, JavaScript, TypeScript, React.js, Next.js, Tailwind CSS, FastAPI, Data Analytics (Learning)"
   },
   {
     icon: "/edu-icon.png",
     iconDark: "/edu-icon-dark.png",
-    title: "Education",
-    description: "Currently - Frontend Trainee in Webskitters Academy",
+   title: "Education",
+description: "FullStack (Next JS,FastAPI,SQL) | Exploring FastAPI & Data Analytics"
   },
   {
     icon: "/project-icon.png",
     iconDark: "/project-icon-dark.png",
     title: "Projects",
-    description: "Till now 3 projects",
+description: "Built 3+ projects demonstrating skills in React, Next.js, and FastAPI"
   },
 ];
 
@@ -36,11 +36,7 @@ const About = () => {
 
         <div className="flex-1">
           <p className="mb-10 max-w-2xl font-mono text-gray-600 dark:text-gray-300">
-            I am a frontend web developer with a passion for building modern,
-            responsive, and user-centric web applications. With a strong
-            foundation in HTML, CSS, and JavaScript, I specialize in creating
-            seamless and visually appealing interfaces using cutting-edge
-            technologies like React, Next.js, and Tailwind CSS.
+            I am a developer skilled in frontend technologies like React, Next.js, and Tailwind CSS, focused on building responsive and user-friendly applications. I also have experience with FastAPI for backend development and am currently growing in data analytics to create data-driven solutions.
           </p>
 
           <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">

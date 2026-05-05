@@ -10,7 +10,6 @@ export const assets = {
   firebase: "/firebase.png",
   supabase:"/supabase.png",
   prisma:"/prisma.png",
-  
   git: "/git.png",
   right_arrow_white: "/right-arrow-white.png",
   logo: "/biswalogo.png",
@@ -31,6 +30,7 @@ export const assets = {
   close_white: "/close-white.png",
   web_icon: "/web-icon.png",
   mobile_icon: "/mobile-icon.png",
+  data_icon: "/data-icon.png",
   ui_icon: "/ui-icon.png",
   graphics_icon: "/graphics-icon.png",
   right_arrow: "/right-arrow.png",
@@ -62,10 +62,24 @@ export interface ServiceItem {
 }
 
 export const serviceData: ServiceItem[] = [
-  { icon: assets.web_icon, title: "Web design", description: "Web design is the process of building, programming...", link: "" },
-  { icon: assets.mobile_icon, title: "Web Development", description: "Web development involves creating responsive websites for both mobile and desktop devices...", link: "" },
-
- 
+  {
+    icon: assets.web_icon,
+    title: "UI/Frontend Development",
+    description: "Creating clean, responsive, and interactive user interfaces for seamless user experience.",
+    link: ""
+  },
+  {
+    icon: assets.mobile_icon,
+    title: "API & Backend Development",
+    description: "Building fast and efficient backend services using FastAPI for modern web applications.",
+    link: ""
+  },
+  {
+    icon: assets.data_icon,
+    title: "Data Insights",
+    description: "Analyzing data to uncover insights and improve application performance and decision-making.",
+    link: ""
+  }
 ];
 
 // Info List

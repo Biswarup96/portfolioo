@@ -34,15 +34,12 @@ const Header = () => {
         <Image src="/hand-icon.png" alt="hand" height={24} width={24} className="w-6" />
       </h3>
 
-      <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-mono text-gray-900 dark:text-white">
-        Frontend Web Developer
+      <h1 className="text-2xl sm:text-6xl lg:text-[30px] font-mono text-gray-900 dark:text-white">
+        Full Stack Developer (Frontend + FastAPI) | Data Analytics Enthusiast
       </h1>
 
       <p className="max-w-2xl mx-auto font-mono text-gray-600 dark:text-gray-200">
-        I am a passionate frontend web developer with a deep love for crafting
-        beautiful, responsive, and user-friendly web experiences. My journey in
-        frontend development has been driven by curiosity to explore the latest
-        technologies, frameworks, and design trends.
+ Passionate developer with strong knowledge in frontend development, building responsive and user-friendly interfaces. Experienced in backend development using FastAPI and currently expanding into data analytics to create data-driven solutions.
       </p>
 
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">

@@ -53,7 +53,7 @@ const Work = () => {
         My Latest Work
       </h2>
 
-      <p className="text-center max-w-2xl mx-auto mt-4 mb-12 text-gray-600">
+      <p className="text-center max-w-2xl mx-auto mt-4 mb-12 text-gray-600 dark:text-gray-300">
         I build responsive frontend experiences, scalable FastAPI backends,
         and explore data-driven solutions.
       </p>
@@ -100,7 +100,7 @@ const Work = () => {
       <div className="text-center mt-16">
         <a
           href="#"
-          className="inline-flex items-center gap-2 px-8 py-3 border border-gray-400 rounded-full text-gray-700 hover:bg-black hover:text-white transition duration-300"
+          className="inline-flex items-center gap-2 px-8 py-3 border border-gray-400 rounded-full text-gray-600 dark:text-gray-300 hover:bg-black hover:text-white transition duration-300"
         >
           Show More
           <Image src={rightArrowBold} alt="arrow" width={16} height={16} />
